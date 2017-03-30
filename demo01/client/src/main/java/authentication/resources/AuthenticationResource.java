@@ -20,8 +20,8 @@ public class AuthenticationResource {
 
     @RequestMapping("/authenticate/future/")
     @ResponseBody
-    public String authenticateFuture() {
-        throw new NotImplementedException();
+    public Set<UserDto> authenticateFuture() {
+        return AuthenticationService.authenticateFuture();
     }
 
     @RequestMapping("/authenticate/completablefuture/")
